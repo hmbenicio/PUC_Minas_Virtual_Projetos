@@ -36,6 +36,8 @@ npm run organize:mobile
 
 Execute cada aplicação em um terminal. Por padrão, o front-end web usa `http://localhost:3000`; ajuste as URLs da API conforme o ambiente local ou o dispositivo móvel utilizado.
 
+> Os três pacotes pertencem ao workspace da raiz e compartilham a instalação feita por `npm install`. `node_modules`, credenciais, builds e vídeos não são versionados.
+
 # Documentação
 
 <ol>

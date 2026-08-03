@@ -1,6 +1,8 @@
 # Codigo Fonte - AlfaStore
 Monorepo do e-commerce AlfaStore com **frontend em Next.js** e **API Node.js/Express em TypeScript**. Aqui estao as orientacoes para configurar, rodar e publicar o projeto.
 
+> **Estrutura atual:** esta é uma documentação técnica histórica. No repositório unificado, `frontend` e `backend` ficam na pasta principal do Eixo 5. Execute `npm install` somente na raiz geral e use `npm run alfa:web` e `npm run alfa:api`.
+
 ## Estrutura
 - `frontend/` - Next.js (app router) integrado ao checkout do Mercado Pago em `/api/payments/mercadopago`.
 - `backend/`  - API REST com Express 5, MongoDB (Mongoose), JWT, Zod e Mercado Pago.

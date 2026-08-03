@@ -21,6 +21,8 @@ npm run social
 
 O terminal exibirá o endereço local. Para uma consulta rápida sem servidor, abra `codigo-fonte/templates/pagina-inicial/pagina-inicial.html` no navegador.
 
+> Este projeto faz parte do workspace da raiz. As bibliotecas são restauradas pelo `npm install` central e `node_modules` não é versionado. Vídeos de demonstração permanecem fora do Git.
+
 ## Integrantes
 
 * Aldrin Taylor C. Bittencourt

@@ -1,17 +1,19 @@
 # OrganiZe API
 
+> **Uso neste repositório:** execute `npm install` somente na raiz e inicie a API com `npm run organize:api`.
+
 **Requisitos para rodar localmente:**
 
   - [Node](https://nodejs.org/en)
 
-**Clone o repositorio para sua maquina**
+**Configure o ambiente local**
 
-  - [Baixar e colar as variaveis de ambiente na raiz do diretorio](https://drive.google.com/file/d/1RrJ4tqG7sHxXsTC9hmovusNJfmOUBIc2/view?usp=sharing)
+  - Crie `backend/.env` sem versioná-lo e defina `DATABASE_URL` ou `MONGO_URI` com a conexão do MongoDB.
 
-**Abra o terminal no diretorio e digite os seguintes comandos:**
+**Na raiz do repositório, execute:**
 
   - npm install
-  - npm run devStart
+  - npm run organize:api
 
 Para ver e testas as rotas e so entrar no arquivo [userRoutes.rest](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2025-1-e4-proj-infra-t3-pmv-ads-2025-1-e4-proj-organize/blob/main/backend/userRoutes.rest)
 

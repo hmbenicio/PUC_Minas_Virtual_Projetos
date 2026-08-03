@@ -1,5 +1,7 @@
 # Welcome to your Expo app 👋
 
+> **Uso neste repositório:** execute `npm install` somente na raiz do repositório e inicie este aplicativo com `npm run organize:mobile`. As instruções abaixo descrevem o uso isolado original do projeto.
+
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started

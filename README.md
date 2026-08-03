@@ -1,6 +1,6 @@
 # Projetos de ADS — PUC Minas Virtual
 
-Este repositório reúne os cinco projetos desenvolvidos ao longo dos cinco eixos do curso de **Análise e Desenvolvimento de Sistemas (ADS)** da **PUC Minas Virtual**. Cada pasta em [`Projetos`](Projetos/) preserva a documentação acadêmica, o código-fonte e os materiais de apresentação produzidos no respectivo semestre.
+Este repositório reúne os cinco projetos desenvolvidos ao longo dos cinco eixos do curso de **Análise e Desenvolvimento de Sistemas (ADS)** da **PUC Minas Virtual**. Os projetos estão versionados como diretórios comuns dentro de [`Projetos`](Projetos/), formando um único repositório com documentação e instalação centralizadas.
 
 ## Projetos
 
@@ -20,7 +20,7 @@ Os projetos JavaScript usam **npm workspaces** e compartilham a instalação de 
 npm install
 ```
 
-Não execute `npm install` dentro das subpastas. Use os atalhos abaixo a partir da raiz:
+Esse comando cria a pasta `node_modules` compartilhada, que não é versionada. Não execute `npm install` dentro das subpastas. Use os atalhos abaixo a partir da raiz:
 
 ```bash
 npm run social
@@ -54,6 +54,17 @@ Esse comando verifica as aplicações que oferecem compilação ou lint automati
 - `Docs/`, `Src/` e `Apresentação/`: material legado do modelo de documentação original.
 - `package.json`: workspaces e atalhos centralizados.
 - `.gitignore`: dependências, builds, logs, credenciais e arquivos temporários que não devem ser versionados.
+
+## Política de versionamento
+
+O código-fonte, a documentação, as imagens e os arquivos necessários para compreender cada projeto são versionados normalmente. Ficam fora do Git:
+
+- dependências instaladas em `node_modules`;
+- resultados de compilação e caches, como `bin`, `obj`, `dist` e `.next`;
+- credenciais e arquivos locais de ambiente;
+- vídeos (`.mp4`, `.mov`, `.avi` e `.mkv`), que devem permanecer em armazenamento externo ou ser referenciados por link.
+
+Depois de clonar o repositório, execute `npm install` uma única vez na raiz para restaurar todas as bibliotecas JavaScript.
 
 ## Licença
 

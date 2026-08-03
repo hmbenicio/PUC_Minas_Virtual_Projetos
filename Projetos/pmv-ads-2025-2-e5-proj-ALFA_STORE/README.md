@@ -37,6 +37,8 @@ npm run alfa:web
 
 Preencha o novo `.env` antes de iniciar a API. Em Linux ou macOS, substitua `Copy-Item` por `cp`. O front-end fica disponível em `http://localhost:3000` e a API usa a porta definida no ambiente.
 
+> Front-end e API pertencem ao workspace da raiz. Dependências são instaladas centralmente; `node_modules`, arquivos `.env`, builds e vídeos de evidência permanecem fora do Git.
+
 # Documentação
 
 <ol>

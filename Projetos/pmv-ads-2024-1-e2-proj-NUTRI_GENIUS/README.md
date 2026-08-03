@@ -34,6 +34,8 @@ npm run nutri
 
 O endereço HTTPS usado na época do curso pode não estar mais disponível; a execução local é a referência mantida neste repositório. O diretório `ConsoleApp1` contém um experimento auxiliar e não é necessário para iniciar o sistema web.
 
+> Este projeto é versionado integralmente dentro da pasta do Eixo 2, exceto artefatos gerados (`bin` e `obj`) e vídeos. Suas dependências são restauradas pelo `dotnet restore`.
+
 # Documentação
 
 <ol>

@@ -1,5 +1,7 @@
 # 🛍️ AlfaStore API (Backend)
 
+> **Uso neste repositório:** execute `npm install` somente na raiz e inicie esta API com `npm run alfa:api`. O arquivo `.env` é local e não deve ser versionado.
+
 Bem-vindo ao repositório do backend da **AlfaStore**, uma API robusta e escalável para e-commerce de calçados, desenvolvida com foco em segurança, performance e boas práticas de engenharia de software.
 
 Este projeto gerencia usuários, autenticação, controle de acesso (RBAC) e catálogo de produtos, servindo como a espinha dorsal para o frontend da loja.

@@ -29,6 +29,8 @@ npm run barber
 
 Use o QR Code exibido pelo Expo ou pressione `a`, `i` ou `w` para escolher uma plataforma. Recursos de autenticação e persistência dependem da configuração Firebase em `barberhub/assets/firebase.config.js`.
 
+> Este projeto faz parte do workspace da raiz. Não instale nem versione um `node_modules` próprio. Os vídeos usados como evidência acadêmica permanecem apenas localmente ou em serviços externos.
+
 # Documentação
 
 <ol>
