@@ -1,0 +1,32 @@
+{
+  "name": "puc-minas-virtual-projetos-ads",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "Projetos/pmv-ads-2023-2-e1-proj-SOCIAL_EVENT",
+    "Projetos/pmv-ads-2024-2-e3-proj-BARBERHUB/barberhub",
+    "Projetos/pmv-ads-2025-1-e4-proj-ORGANIZE/backend",
+    "Projetos/pmv-ads-2025-1-e4-proj-ORGANIZE/organize",
+    "Projetos/pmv-ads-2025-1-e4-proj-ORGANIZE/organize_mobile",
+    "Projetos/pmv-ads-2025-2-e5-proj-ALFA_STORE/backend",
+    "Projetos/pmv-ads-2025-2-e5-proj-ALFA_STORE/frontend"
+  ],
+  "scripts": {
+    "social": "npm run start -w social-event",
+    "nutri": "dotnet run --project Projetos/pmv-ads-2024-1-e2-proj-NUTRI_GENIUS/ProjetoNutriGenius/ProjetoNutriGenius.csproj",
+    "barber": "npm run start -w barberhub",
+    "organize:web": "npm run dev -w organize-web",
+    "organize:mobile": "npm run start -w organize-mobile",
+    "organize:api": "npm run start -w organize-api",
+    "alfa:web": "npm run dev -w alfa-store-web",
+    "alfa:api": "npm run dev -w alfa-store-api",
+    "check": "npm run check:nutri && npm run check:barber && npm run check:organize && npm run check:alfa",
+    "check:nutri": "dotnet build Projetos/pmv-ads-2024-1-e2-proj-NUTRI_GENIUS/ProjetoNutriGenius/ProjetoNutriGenius.csproj --no-restore",
+    "check:barber": "npm run lint -w barberhub",
+    "check:organize": "npm run build -w organize-web && npm run lint -w organize-mobile",
+    "check:alfa": "npm run build -w alfa-store-api && npm run build -w alfa-store-web"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

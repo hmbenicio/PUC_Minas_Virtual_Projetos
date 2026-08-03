@@ -1,0 +1,57 @@
+# Dependências e gerenciadores
+node_modules/
+.npm/
+.yarn/
+.pnpm-store/
+
+# Builds e cobertura
+bin/
+obj/
+dist/
+build/
+.next/
+.expo/
+coverage/
+*.tsbuildinfo
+
+# Ambiente, credenciais e certificados
+.env
+.env.*
+!.env.example
+*.pem
+*.pfx
+*.keystore
+
+# Logs, caches e temporários
+*.log
+*.tmp
+*.temp
+.cache/
+.eslintcache
+.DS_Store
+Thumbs.db
+
+# Mídias e pacotes pesados (manter em armazenamento externo)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
+*.rar
+*.7z
+
+# IDE e sistema
+.idea/
+.vs/
+.vscode/
+*.user
+*.suo
+*.db
+*.sqlite
+*.sqlite3
+
+# Mobile nativo gerado
+**/android/.gradle/
+**/android/app/build/
+**/ios/Pods/
+**/ios/build/
