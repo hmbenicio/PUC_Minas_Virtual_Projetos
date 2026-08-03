@@ -1,6 +1,6 @@
-# Projetos de ADS — PUC Minas Virtual
-
 ![Logo de Análise e Desenvolvimento de Sistemas](Projetos/assets/Logo_ADS.png)
+
+# Projetos de ADS — PUC Minas Virtual
 
 Este repositório reúne os cinco projetos desenvolvidos ao longo dos cinco eixos do curso de **Análise e Desenvolvimento de Sistemas (ADS)** da **PUC Minas Virtual**. Os projetos estão versionados como diretórios comuns dentro de [`Projetos`](Projetos/), formando um único repositório com documentação e instalação centralizadas.
 
