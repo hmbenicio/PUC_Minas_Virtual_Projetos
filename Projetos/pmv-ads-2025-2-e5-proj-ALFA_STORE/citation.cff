@@ -1,0 +1,26 @@
+message: Please cite this software using these metadata.
+title: "e-commerce - Alfa Havaianas"
+authors:
+  - family-names: Miguel Soutelo Marra
+    given-names: Bernardo 
+  - family-names: Campos Xavier
+    given-names: Bianca
+  - family-names: Brito Fonseca e Silva
+    given-names: Guilherme
+  - family-names: Miranda Benício
+    given-names: Helbert
+  - family-names: Wagner Silveira e Silva
+    given-names: Jefferson
+  - family-names: de Carvalho Brum
+    given-names: Jonatas
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Azevedo Nigri do Carmo
+    given-names: Humberto
+keywords:
+  - Alfa Havaianas
+  - Loja de Chinelos
+  - e-commerce
+repository-code: 
+version: 1.0.0
+date-released: 2025-12-07

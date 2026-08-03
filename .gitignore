@@ -31,14 +31,11 @@ coverage/
 .DS_Store
 Thumbs.db
 
-# Mídias e pacotes pesados (manter em armazenamento externo)
+# Vídeos de apresentação e evidências (mantidos apenas localmente)
 *.mp4
 *.mov
 *.avi
 *.mkv
-*.zip
-*.rar
-*.7z
 
 # IDE e sistema
 .idea/

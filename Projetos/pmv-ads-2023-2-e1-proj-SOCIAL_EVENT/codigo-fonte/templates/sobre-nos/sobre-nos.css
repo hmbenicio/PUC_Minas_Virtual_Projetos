@@ -1,0 +1,43 @@
+header {
+    height: 64px;
+    margin: 16px 0;
+    position: relative;
+}
+
+.nossa-historia {
+    gap: 150px;
+    padding: 0 30px;
+    margin-bottom: 100px;
+}
+
+.nossa-missao {
+    gap: 150px;
+    padding: 0 30px;
+    margin-top: 150px;
+    margin-bottom: 200px;
+}
+
+#texto {
+    font-family: 'Poppins', sans-serif;
+}
+
+#titulo {
+    font-family: 'DM Sans', sans-serif;
+}
+
+#img-festa {
+    width: 30%;
+    height: auto;
+    margin: 10px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#img-copos {
+    width: 30%;
+    height: auto;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 150px;
+    float: right;
+}

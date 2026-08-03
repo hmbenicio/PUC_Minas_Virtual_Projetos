@@ -1,0 +1,28 @@
+header {
+    height: 64px;
+    margin: 16px 0;
+    position: relative;
+}
+
+input {
+    border-radius: 20px;
+    width: 400px;
+    height: 30px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#input {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 10px;
+}
+
+#img-home {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}

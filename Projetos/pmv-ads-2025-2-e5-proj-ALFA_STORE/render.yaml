@@ -1,0 +1,91 @@
+# =============================================================================
+# Render Blueprint - AlfaStore Backend
+# Documentação: https://docs.render.com/blueprint-spec
+# =============================================================================
+
+services:
+  # ---------------------------------------------------------------------------
+  # Backend API (Node.js + Express)
+  # ---------------------------------------------------------------------------
+  - type: web
+    name: alfastore-api
+    runtime: docker
+    
+    # Diretório raiz do serviço (relativo à raiz do repositório)
+    # O Render só faz deploy quando há mudanças neste diretório
+    rootDir: backend
+    
+    # Caminho para o Dockerfile (relativo ao rootDir)
+    dockerfilePath: ./Dockerfile
+    
+    # Contexto de build (relativo ao rootDir)
+    dockerContext: .
+    
+    # Branch que dispara deploys automáticos
+    branch: main
+    
+    # Região (Oregon é a mais próxima do Brasil com bom custo-benefício)
+    region: oregon
+    
+    # Plano (free, starter, standard, pro)
+    plan: free
+    
+    # Health Check - Render verifica se o serviço está saudável
+    healthCheckPath: /
+    
+    # Número de instâncias (apenas para planos pagos)
+    # numInstances: 1
+    
+    # Variáveis de ambiente
+    # IMPORTANTE: Valores sensíveis devem ser configurados no Dashboard do Render
+    # usando "sync: false" para não expor no repositório
+    envVars:
+      # Servidor
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      
+      # Banco de Dados (configurar no Dashboard)
+      - key: MONGO_URI
+        sync: false
+      
+      # Segurança (configurar no Dashboard)
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_EXPIRES_IN
+        value: 8h
+      
+      # CORS
+      - key: CORS_ORIGIN
+        value: https://www.alfaofc.com.br,https://alfaofc.com.br
+      
+      # Frontend URLs
+      - key: FRONTEND_URL
+        value: https://www.alfaofc.com.br
+      - key: FRONTEND_BASE_URL
+        value: https://www.alfaofc.com.br
+      
+      # E-mail SMTP (configurar no Dashboard)
+      - key: EMAIL_HOST
+        value: smtp-relay.brevo.com
+      - key: EMAIL_PORT
+        value: 587
+      - key: EMAIL_USERNAME
+        sync: false
+      - key: EMAIL_PASSWORD
+        sync: false
+      - key: EMAIL_FROM
+        value: alfahavaianas1@gmail.com
+      
+      # Mercado Pago (configurar no Dashboard)
+      - key: MERCADO_PAGO_ACCESS_TOKEN
+        sync: false
+      - key: MERCADO_PAGO_SUCCESS_URL
+        value: https://www.alfaofc.com.br/shop?status=success
+      - key: MERCADO_PAGO_FAILURE_URL
+        value: https://www.alfaofc.com.br/shop?status=failure
+      - key: MERCADO_PAGO_PENDING_URL
+        value: https://www.alfaofc.com.br/shop?status=pending
+      - key: MERCADO_PAGO_NOTIFICATION_URL
+        value: https://alfastore-api.onrender.com/api/v1/payments/webhook

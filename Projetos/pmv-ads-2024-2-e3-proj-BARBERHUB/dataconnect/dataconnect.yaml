@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "pmv-ads-2024-2-e3-proj-mov-t4-pmv-ads-2024-2-e3-proj-mov-t4-barberhub"
+location: "southamerica-east1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "pmv-ads-2024-2-e3-proj-mov-t4-pmv-ads-2024-2-e3-proj-mov-t4-barberhub-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]

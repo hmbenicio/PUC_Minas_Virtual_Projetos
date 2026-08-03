@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/script/**/*.ts",
+    "expo-env.d.js",
+    ".expo/script/router.d.js",
+    "app/+not-found.jsx",
+    "app/_layout.jsx",
+    "app/(tabs)/mapa.jsx",
+    "app/(tabs)/index.jsx",
+    "app/(tabs)/favoritos.jsx",
+    "app/(tabs)/agenda.jsx",
+    "app/(tabs)/about.jsx",
+    "app/(tabs)/_layout.jsx",
+    "app/(tabs_agenda)/openAgenda.jsx",
+    "app/(tabs_favoritos)/openFavoritos.jsx",
+    "app/(tabs_home)/agendaBarba.jsx",
+    "app/(tabs_home)/agendaCortes.jsx",
+    "app/(tabs_home)/agendaLimpeza.jsx",
+    "app/(tabs_login)/acessoLogin.jsx",
+    "app/(tabs_login)/criarConta.jsx",
+    "app/(tabs_login)/esqueceuLogin.jsx",
+    "app/(tabs_mapa)/openMapa.jsx",
+    "components/ImageViewerLogo.jsx",
+    "components/Button.js",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "components/calendarConfig.js"
+  ],
+  "extends": "expo/tsconfig.base"
+}

@@ -1,0 +1,65 @@
+.btn {
+    /*text*/
+    font-family: Helvetica;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    /*coloring*/
+    background-color: #007ACC;
+    color: #FFFFFF;
+    /*box*/
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    border: 1px solid transparent;
+}
+
+.card {
+    /*flex*/
+    display: flex;
+    flex-direction: column;
+    /*box*/
+    border: 1px solid #999999;
+    border-radius: 20px;
+    width: 255px;
+    height: 100%;
+}
+
+.card img {
+    width: 255px;
+    height: 188px;
+}
+
+.card .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #333333;
+    padding: 16px;
+    height: 188px;
+}
+
+.card .content ul {
+    padding: 0;
+    line-height: 1.5;
+}
+
+.card .content ul :first-child{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card button {
+    align-self: flex-end;
+}
+
+.card .card_buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#remove{
+    background-color: red
+}

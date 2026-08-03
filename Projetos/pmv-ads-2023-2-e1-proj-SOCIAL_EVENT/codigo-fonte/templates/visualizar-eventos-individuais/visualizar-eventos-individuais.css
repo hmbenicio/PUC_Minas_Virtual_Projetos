@@ -1,0 +1,31 @@
+header {
+    height: 64px;
+    margin: 16px 0;
+    position: relative;
+}
+
+input {
+    border-radius: 20px;
+    width: 400px;
+    position: relative;
+    top: 30px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 10px;
+}
+
+fieldset {
+    width: 340px;
+    padding: 30px;
+    border: 3px solid #ccc;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#container:first-child {
+    height: 340px;
+}

@@ -1,0 +1,11 @@
+# Dependências locais que serão instaladas dentro do contêiner
+node_modules
+
+# Arquivos de build que serão gerados dentro do contêiner
+dist
+
+# Arquivo de variáveis de ambiente (nunca deve ir para a imagem)
+.env
+
+# Logs e outros arquivos de sistema
+npm-debug.log

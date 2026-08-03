@@ -1,0 +1,92 @@
+<html lang="pt-bt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../components/header/header.css">
+  <link rel="stylesheet" href="../../components/footer/footer.css">
+  <link rel="stylesheet" href="../../shared.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;1,9..40,200&family=Inter&family=Poppins:ital,wght@1,100&display=swap"
+    rel="stylesheet">
+  <title>Cadastro de evento</title>
+</head>
+
+<body>
+  <header id="header"></header>
+  <nav id="dropdown"></nav>
+  <main>
+    <div class="form">
+      <div class="dados-do-evento-bloco">
+        <div class="title">
+          <h1>Cadastre seu evento</h1>
+        </div>
+        <h4 id="subtitle">Crie um evento memorável</h4>
+        <p id="dados-do-evento"><b>Dados do evento</b></p>
+        <div class="nome-do-evento">
+          <br><label for="nome-do-evento">
+            Nome do evento <br><input type="text" name="nome" class="form_input">
+          </label>
+          <br>
+        </div>
+        <div class="endereço do evento">
+          <br><label for="endereço do evento">
+            Endereço do evento <br><input type="text" name="endereço" class="form_input">
+          </label>
+          <br>
+        </div>
+        <div class="data-do-evento">
+          <br><label for="data do evento">
+            Data do evento <br><input type="text" name="data" class="form_input">
+          </label>
+        </div>
+        <div class="custo do evento">
+          <label for="custo do evento">
+            Custo do evento <br><input type="text" name="custo" class="form_input">
+          </label>
+          <br>
+        </div>
+        <div id="div_button">
+          <div type="button" id="button" class="btn"> Confirmar </div>
+          <!-- <input type="submit" value="Faça seu login" id="button" class="btn" onclick="fazerLogin()"> -->
+        </div>
+      </div>
+      <div class="form">
+        <div class="dados-do-evento-bloco">
+
+          <div>
+            <h3>Adicionar / Remover convidados</h3>
+            <label for="nomecompleto">Digite o nome completo do convidado:</label><br>
+            <input class="input_text" type="text" id="nome_completo" name="nome_completo" onfocus="this.value=''"
+              placeholder="Nome do convidado"><br><br>
+            <div id="buttons">
+              <div id="input_button" class="input_button">Convidar</div>
+              <div id="input_button2" class="input_button2">Remover</div>
+            </div>
+          </div>
+
+          <h3 id="responsaveis-title">Lista de Convidados</h3>
+
+          <form>
+            <fieldset>
+              <legend>Lista</legend>
+              <div class="input-container">
+                <label for="lista">Convidados:
+                  <ul id="lista_convidados"></ul>
+                </label>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="../../shared.js"></script>
+  <script type="module" src="cadastro-evento.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+name: Deploy Frontend to VM
+
+on:
+  push:
+    branches:
+      - main        # ou master, se for o caso
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      MP_PUBLIC_KEY: ${{ secrets.MERCADO_PAGO_PUBLIC_KEY }}
+      MP_ACCESS_TOKEN: ${{ secrets.MERCADO_PAGO_ACCESS_TOKEN }}
+      MP_CLIENT_ID: ${{ secrets.MERCADO_PAGO_CLIENT_ID }}
+      MP_CLIENT_SECRET: ${{ secrets.MERCADO_PAGO_CLIENT_SECRET }}
+      MP_SUCCESS_URL: ${{ secrets.MERCADO_PAGO_SUCCESS_URL }}
+      MP_FAILURE_URL: ${{ secrets.MERCADO_PAGO_FAILURE_URL }}
+      MP_PENDING_URL: ${{ secrets.MERCADO_PAGO_PENDING_URL }}
+      MP_NOTIFICATION_URL: ${{ secrets.MERCADO_PAGO_NOTIFICATION_URL }}
+      MP_STATEMENT_DESCRIPTOR: ${{ secrets.MERCADO_PAGO_STATEMENT_DESCRIPTOR }}
+      FRONTEND_BASE_URL: https://www.alfaofc.com.br
+
+    steps:
+      - name: Checkout (opcional, sA3 pra ter o cA3digo disponA-vel no job)
+        uses: actions/checkout@v4
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          timeout: 120s
+          command_timeout: 20m
+          envs: MP_PUBLIC_KEY,MP_ACCESS_TOKEN,MP_CLIENT_ID,MP_CLIENT_SECRET,MP_SUCCESS_URL,MP_FAILURE_URL,MP_PENDING_URL,MP_NOTIFICATION_URL,MP_STATEMENT_DESCRIPTOR,FRONTEND_BASE_URL
+          script: |
+            set -euo pipefail
+            REPO_URL="git@github.com:ICEI-PUC-Minas-PMV-ADS/pmv-ads-2025-2-e5-proj-empext-t5-pmv-ads-2025-2-e5-ecommerce-alfastore.git"
+
+            if [ ! -d "/opt/alfastore/.git" ]; then
+              echo "[Deploy] Clonando repositorio..."
+              sudo rm -rf /opt/alfastore || true
+              sudo mkdir -p /opt/alfastore
+              sudo chown -R "$USER":"$USER" /opt/alfastore
+              git clone "${REPO_URL}" /opt/alfastore
+            fi
+
+            cd /opt/alfastore
+            echo "[Deploy] Atualizando codigo (forcando igual ao origin/main)..."
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd
+            git config --global pull.ff only
+            mkdir -p frontend
+
+            # Exporta variaveis para o docker-compose (build e runtime)
+            export NEXT_PUBLIC_MERCADO_PAGO_PUBLIC_KEY="${MP_PUBLIC_KEY}"
+            export MERCADO_PAGO_ACCESS_TOKEN="${MP_ACCESS_TOKEN}"
+            export MERCADO_PAGO_CLIENT_ID="${MP_CLIENT_ID}"
+            export MERCADO_PAGO_CLIENT_SECRET="${MP_CLIENT_SECRET}"
+            export MERCADO_PAGO_SUCCESS_URL="${MP_SUCCESS_URL:-https://www.alfaofc.com.br/shop?status=success}"
+            export MERCADO_PAGO_FAILURE_URL="${MP_FAILURE_URL:-https://www.alfaofc.com.br/shop?status=failure}"
+            export MERCADO_PAGO_PENDING_URL="${MP_PENDING_URL:-https://www.alfaofc.com.br/shop?status=pending}"
+            export MERCADO_PAGO_NOTIFICATION_URL="${MP_NOTIFICATION_URL:-https://alfastore-api.onrender.com/api/v1/payments/webhook}"
+            export MERCADO_PAGO_STATEMENT_DESCRIPTOR="${MP_STATEMENT_DESCRIPTOR:-ALFASTORE}"
+            export FRONTEND_BASE_URL="${FRONTEND_BASE_URL:-https://www.alfaofc.com.br}"
+
+            echo "[Deploy] Buildando e subindo containers..."
+            export COMPOSE_PROJECT_NAME=alfastore
+            # Tenta parar e limpar recursos sem falhar o deploy se nao existirem
+            docker compose down --remove-orphans || true
+            docker rm -f alfastore-frontend alfastore-nginx || true
+            docker network rm alfastore_default || true
+            # Limpa cache/imagens/volumes para evitar falta de espaco
+            docker system prune -af || true
+            docker volume prune -f || true
+            docker builder prune -af || true
+            docker compose build --no-cache
+            docker compose up -d --remove-orphans

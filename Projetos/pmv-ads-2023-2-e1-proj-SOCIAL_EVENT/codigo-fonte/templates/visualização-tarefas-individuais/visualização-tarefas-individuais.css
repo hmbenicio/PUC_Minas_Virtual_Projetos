@@ -1,0 +1,67 @@
+header {
+    height: 64px;
+    margin: 16px 0;
+    position: relative;
+}
+
+input {
+    border-radius: 15px;
+    width: 350px;
+    position: relative;
+    top: 15px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 10px;
+}
+
+fieldset {
+    width: 340px;
+    padding: 30px;
+    border: 3px solid #ccc;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#container:first-child {
+    height: 340px;
+}
+
+.form_input {
+    margin: 10px 0;
+    width: 100%;
+    padding: 5px;
+}
+
+.input-container {
+    text-align: left;
+}
+
+.input_button {
+    /*box*/
+    border-radius: 5px;
+    width: 100px;
+    position: relative;
+    top: 5px;
+    padding: 5px;
+    /*text*/
+    font-family: Helvetica;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    /*coloring*/
+    background-color: #007ACC;
+    color: #FFFFFF;
+}
+
+.input_text {
+    border-radius: 5px;
+    width: 360px;
+    position: relative;
+    top: 15px;
+    padding: 5px;
+}

@@ -1,0 +1,91 @@
+<html lang="pt-bt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../components/header/header.css">
+  <link rel="stylesheet" href="../../components/footer/footer.css">
+  <link rel="stylesheet" href="../../shared.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;1,9..40,200&family=Inter&family=Poppins:ital,wght@1,100&display=swap"
+    rel="stylesheet">
+  <title>Cadastro de tarefa</title>
+</head>
+
+<body>
+  <header id="header"></header>
+  <nav id="dropdawn"></nav>
+  <main>
+    <div class="form">
+      <div class="dadas-da-tarefa-bloco">
+        <div class="title">
+          <h1>Cadastre sua tarefa</h1>
+        </div>
+        <h4 id="subtitle">Organize seu tarefa memorável</h4>
+        <p id="dados-da-tarefa"><b>Dados da tarefa</b></p>
+        <div class="nome-da-tarefa">
+          <br><label for="nome-da-tarefa">
+            Nome da tarefa <br><input type="text" name="nome" class="form_input">
+          </label>
+          <br>
+        </div>
+        <div class="fornecedor da tarefa">
+          <br><label for="fornecedor da tarefa">
+            Fornecedor da tarefa <br><input type="text" name="fornecedor" class="form_input">
+          </label><br>
+        </div>
+        <div class="data-da-tarefa">
+          <br><label for="data da tarefa">
+            Data da tarefa <br><input type="text" name="data" class="form_input">
+          </label>
+        </div>
+        <div class="custo da tarefa">
+          <label for="custo da tarefa">
+            Custo da tarefa <br><input type="text" name="custo" class="form_input">
+          </label>
+          <br>
+        </div>
+        <div id="div_button">
+          <div type="button" id="button" class="btn"> Confirmar </div>
+          <!-- <input type="submit" value="Faça seu login" id="button" class="btn" onclick="fazerLogin()"> -->
+        </div>
+      </div>
+      <div class="form">
+        <div class="dados-do-evento-bloco">
+
+          <div>
+            <h3>Adicionar / Remover tarefas</h3>
+            <label for="nome_completo">Digite o nome completo do participante:</label><br>
+            <input class="input_text" type="text" id="nome_completo" name="nome_completo" onfocus="this.value=''"
+              placeholder="Nome do participante"><br><br>
+            <div id="buttons">
+              <div id="input_button" class="input_button">Adicionar</div>
+              <div id="input_button2" class="input_button2">Remover</div>
+            </div>
+          </div>
+
+          <h3 id="responsaveis-title">Lista de Tarefas</h3>
+
+          <form>
+            <fieldset>
+              <legend>Lista</legend>
+              <div class="input-container">
+                <label for="lista">Participantes:
+                  <ul id="lista_participantes"></ul>
+                </label>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="../../shared.js"></script>
+  <script type="module" src="cadastro-tarefa.js"></script>
+</body>
+
+</html>

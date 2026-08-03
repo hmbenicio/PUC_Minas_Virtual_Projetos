@@ -1,0 +1,14 @@
+{
+  "name": "social-event",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve codigo-fonte"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2"
+  }
+}

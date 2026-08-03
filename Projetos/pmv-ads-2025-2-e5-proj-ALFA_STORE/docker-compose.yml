@@ -1,0 +1,40 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_MERCADO_PAGO_PUBLIC_KEY: ${NEXT_PUBLIC_MERCADO_PAGO_PUBLIC_KEY}
+    container_name: alfastore-frontend
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+      - PORT=3000
+      - NEXT_PUBLIC_MERCADO_PAGO_PUBLIC_KEY=${NEXT_PUBLIC_MERCADO_PAGO_PUBLIC_KEY}
+      - MERCADO_PAGO_ACCESS_TOKEN=${MERCADO_PAGO_ACCESS_TOKEN}
+      - MERCADO_PAGO_CLIENT_ID=${MERCADO_PAGO_CLIENT_ID}
+      - MERCADO_PAGO_CLIENT_SECRET=${MERCADO_PAGO_CLIENT_SECRET}
+      - MERCADO_PAGO_SUCCESS_URL=${MERCADO_PAGO_SUCCESS_URL}
+      - MERCADO_PAGO_FAILURE_URL=${MERCADO_PAGO_FAILURE_URL}
+      - MERCADO_PAGO_PENDING_URL=${MERCADO_PAGO_PENDING_URL}
+      - MERCADO_PAGO_NOTIFICATION_URL=${MERCADO_PAGO_NOTIFICATION_URL}
+      - MERCADO_PAGO_STATEMENT_DESCRIPTOR=${MERCADO_PAGO_STATEMENT_DESCRIPTOR}
+      - FRONTEND_BASE_URL=${FRONTEND_BASE_URL}
+    ports:
+      - "3000:3000" # acesso direto opcional
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: alfastore-nginx
+    depends_on:
+      - frontend
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - /etc/letsencrypt/live/alfaofc.com.br/fullchain.pem:/etc/ssl/certs/alfaofc_fullchain.pem:ro
+      - /etc/letsencrypt/live/alfaofc.com.br/privkey.pem:/etc/ssl/private/alfaofc_privkey.pem:ro
+    restart: unless-stopped
+
+volumes: {}

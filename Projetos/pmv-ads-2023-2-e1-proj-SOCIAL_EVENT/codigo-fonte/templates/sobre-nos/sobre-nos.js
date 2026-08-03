@@ -1,0 +1,2 @@
+loadComponent('header')
+loadComponent('footer')

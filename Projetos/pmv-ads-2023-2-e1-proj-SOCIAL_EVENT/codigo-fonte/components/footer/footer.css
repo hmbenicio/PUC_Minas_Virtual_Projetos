@@ -1,0 +1,14 @@
+#credits {
+    background-color: #007ACC;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 10vh;
+    font-family: 'Inter', sans-serif;
+}
+
+#credits p {
+    line-height: 1; 
+    font-size: 16px;
+}

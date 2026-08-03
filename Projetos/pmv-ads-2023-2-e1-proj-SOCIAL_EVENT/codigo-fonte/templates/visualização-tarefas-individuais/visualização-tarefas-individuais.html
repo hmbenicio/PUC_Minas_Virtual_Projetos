@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- UTF-8 (UCS Transformation Format 8) é a codificação de caracteres mais comum da World Wide Web -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- a largura da página é igual a largura do dispositivo que está abrindo -->
+    <link rel="stylesheet" href="../../shared.css">
+    <!-- "rel" é o mesmo que relação e "stylesheet" é a lista de estilos. "href" é onde se encontra -->
+    <link rel="stylesheet" href="../../templates/Visualização-tarefas-individuais/Visualização-tarefas-individuais.css">
+    </link>
+    <title> Tarefa individual </title> <!-- Refere-se ao título da página -->
+</head>
+
+<body>
+    <header id="header"></header>
+    <nav id="dropdown"></nav>
+
+    <main>
+
+        <div id="container">
+            <fieldset>
+                <legend>
+                <h2 id="nome-tarefa">Nome da Tarefa</h2>
+                </legend>
+                Fornecedor:
+                <div id="nome-fornecedor"></div>
+                Data:
+                <div id="data-tarefa"></div>
+                Custo da Tarefa:
+                <div id="custo-tarefa"></div>
+            </fieldset>
+            <form onsubmit="return false">
+
+                <fieldset>
+                    <legend>Equipe responsável</legend>
+                    <div class="input-container">
+                        <label for="lista">Participantes:
+                            <ul id="lista_responsavel"></ul>
+                        </label>
+                    </div>
+                </fieldset>
+
+            </form>
+        </div>
+
+    </main>
+
+    <footer id="footer"></footer>
+    <script src="../../shared.js"></script> <!-- "script src=" Aponta a fonte da informação em JS -->
+    <script src="visualização-tarefas-individuais.js"></script>
+</body>
+
+</html>

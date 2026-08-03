@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- UTF-8 (UCS Transformation Format 8) é a codificação de caracteres mais comum da World Wide Web -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- a largura da página é igual a largura do dispositivo que está abrindo -->
+  <link rel="stylesheet" href="../../shared.css">
+  <link rel="stylesheet" href="../../templates/visualizar-eventos-individuais/visualizar-eventos-individuais.css">
+  </link>
+  <title> Evento individual </title> <!-- Refere-se ao título da página -->
+</head>
+
+<body>
+  <header id="header"></header>
+  <nav id="dropdown"></nav>
+
+  <main>
+
+    <div id="container">
+      <fieldset>
+        <legend>
+          <h2 id="nome-evento">Nome do Evento</h2>
+        </legend>
+        Data:
+        <div id="data-evento"></div>
+        Endereço:
+        <div id="endereco-evento"></div>
+        Custo do Evento:
+        <div id="custo-evento"></div>
+      </fieldset>
+
+      <div>
+        <form>
+          <fieldset>
+            <legend>Lista</legend>
+            <div class="input-container">
+              <label for="lista">Convidados:
+                <ul id="lista_convidados"></ul>
+              </label>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="footer"></footer>
+  <script src="../../shared.js"></script>
+  <script src="visualizar-eventos-individuais.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../templates/listagem/listagem.css"></link>
+        <link rel="stylesheet" href="../../components/card/card.css"></link>
+        <link rel="stylesheet" href="../../shared.css"></link>
+    </head>
+    <body>
+        <header id="header"></header>
+        <nav id="dropdown"></nav>
+        <main>
+            <div id="listagem">
+                <h2 id="title"></h2>
+                <ul class="card-list"></ul>
+                <div id="buttons">
+                    <div id="left-buttons">
+                        <div class="btn" id="add"><a id="add-link">Adicionar</a></div>
+                    </div>
+                    <div id="right-buttons">
+                        <div class="btn" id="previous">Anterior</div>
+                        <div class="btn" id="next">Próximo</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer"></footer>
+        <script src="../../shared.js"></script>
+        <script type="module" src="listagem.js"></script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+#nav-bar {
+    /*flex-box*/
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    /*coloring*/    
+    background-color: #007ACC;
+    color: #FFFFFF;
+    /*spacing*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 80px;
+    z-index: 1;
+
+    /*font*/
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+#nav-bar .divider {
+    position: relative;
+    width: 2px;
+    height: 50px;
+    background-color: #e5e8eb;
+    border-radius: 2px;
+}
+
+#nav-bar .left-content {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+#nav-bar .logo {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#nav-bar .logo img {
+    margin-right: 16px;
+    height: 300px;
+} 
+
+#nav-bar .links  {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+#nav-bar .links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-bar .links li {
+    display: inline;
+    margin-right: 16px;
+    border: solid  3px #e5e8eb;
+    border-radius: 5px;
+    padding: 5px;   
+}
+
+
+#nav-bar .right-content {
+    color: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#nav-bar .right-content > * {
+    margin: 0 5px;
+}

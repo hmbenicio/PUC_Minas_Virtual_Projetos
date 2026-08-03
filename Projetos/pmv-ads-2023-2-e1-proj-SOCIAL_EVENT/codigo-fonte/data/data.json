@@ -1,0 +1,101 @@
+{
+  "eventos": [
+    {
+      "nome": "Festa Brega",
+      "endereço": "71040-458, Dom Pedro II, Fundo 7, nº 2058, Vila Nova, João Pessoa, Paraíba",
+      "data": "27/10/2023",
+      "convidados": [
+        "Beto Márcio Batista",
+        "Leni Mendonça Queirós",
+        "Abgail Celina de Abreu"
+      ],
+      "custo": 8000.00
+    },
+    {
+      "nome": "Festa de Aniversário",
+      "endereço": "58813-377, Quatorze, Sala 5, nº 9182, São Francisco, São José de Ribamar, Maranhão",
+      "data": "28/10/2023",
+      "convidados": [
+        "Inácio Raul Ávila Pacheco",
+        "Nathan Brito Filho",
+        "Elisângela Correia Leal"
+      ],
+      "custo": 16000.00
+    },
+    {
+      "nome": "Festa de Casamento",
+      "endereço": "77572-764, Primeiro de Maio, Andar 9, nº 3853, São Cristóvão, Caruaru, Pernambuco",
+      "data": "29/10/2023",
+      "convidados": [
+        "Luzinete Raquel Galindo Galvão de Ferraz",
+        "Hernani Jonathan de Gonçalves",
+        "Horácio Maximiano Rangel Santiago"
+      ],
+      "custo": 32000.00
+    },
+    {
+      "nome": "Social Event Festival",
+      "endereço": "Av. Trinta e Um de Março - Coração Eucarístico, Belo Horizonte - MG, 30535-000",
+      "data": "10/12/2023",
+      "convidados": [
+        "Evento aberto ao público"
+      ],
+      "custo": 0.00
+    }
+  ],
+  "usuarios": [
+    {
+      "nome": "Carla Liz",
+      "email": "carla@gmail.com",
+      "papel": "administrador",
+      "senha": "12345678"
+    }
+  ],
+  "tarefas": [
+    {
+      "nome": "Buffet a la carte",
+      "fornecedor": "Cozinha do chefe",
+      "data": "03/12/2023",
+      "custo": 10000.00,
+      "participantes": [
+        "Beto Márcio Batista",
+        "Leni Mendonça Queirós",
+        "Abgail Celina de Abreu"
+      ]
+    },
+
+    {
+      "nome": "Iluminação",
+      "fornecedor": "Luminosity",
+      "data": "03/12/2023",
+      "custo": 3000.00,
+      "participantes": [
+        "Inácio Raul Ávila Pacheco",
+        "Nathan Brito Filho",
+        "Elisângela Correia Leal"        
+      ]
+    },
+    {
+      "nome": "Música",
+      "fornecedor": "Beatles",
+      "data": "03/12/2023",
+      "custo": 1000000.00,
+      "participantes": [
+        "Luzinete Raquel Galindo Galvão de Ferraz",
+        "Hernani Jonathan de Gonçalves",
+        "Horácio Maximiano Rangel Santiago"        
+      ]
+    },
+
+    {
+      "nome": "Segurança",
+      "fornecedor": "Rambo",
+      "data": "03/12/2023",
+      "custo": 0.00,
+      "participantes": [
+        "Sylvester Stallone"
+      ]
+    }
+
+  ]
+}

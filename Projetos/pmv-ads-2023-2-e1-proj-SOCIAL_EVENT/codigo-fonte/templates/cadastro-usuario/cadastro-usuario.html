@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="cadastro-usuario.css">
+    <script defer src="https://kit.fontawesome.com/ab5c50adaf.js" crossorigin="anonymous"></script>
+    <script type="module" defer src="cadastro-usuario.js"></script>
+    <script></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content first-content"> <!-- 1° onde ficará a parte de realizar o login-->
+            <div class="first-column">
+                <h2 class="title title-primary">Olá, novamente!</h2>
+                <p class="description description-primario">Retorne ao SocialEvent</p>
+                <p class="description description-primario">Logue com seus dados de acesso</p>
+                <button id="signin" class="btn btn-primary">Entrar</button>   
+            </div>
+            <div class="second-column"> <!-- 2° coluna onde ficará a a parte de cadastro-->
+                <h2 class="title title-second">Crie sua conta</h2>
+                <div class="sobre-nos">
+                    <ul class="lista-redirecionamento">
+                        <a class="link-redirecionamento-media" href="/codigo-fonte/templates/pagina-inicial/pagina-inicial.html">
+                            <li class="item-redirecionamento-media">
+                                <i class="fa-regular fa-house-user"></i>
+                            </li>
+                        </a>         
+                        <a class="link-redirecionamento-media" href="#">
+                            <li class="item-redirecionamento-media">
+                                <i class="fa-solid fa-question"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div> <!-- Redirecionamentos dentro do próprio site -->
+                <p class="description description-secundario">Use seu e-mail para o cadastro</p>
+                <form class="form">
+                    <label class="label-input">
+                        <i class="fa-regular fa-user icon-modify" style="color: #007acc;"></i>
+                        <input type="text" id="nameSignup" placeholder="Nome">
+                    </label>
+
+                    <label class="label-input">
+                        <i class="fa-regular fa-envelope icon-modify" style="color: #007acc;"></i>
+                        <input type="email" name="e-mail" id="emailSignup" class="form" placeholder="E-mail">
+                    </label>
+
+                    <label class="label-input">
+                        <i class="fa-regular fa-lock icon-modify" style="color: #007acc;"></i>
+                        <input type="password" name="senha" id="passwordSignup" class="form" placeholder="Senha">
+                    </label>
+                    
+                    <div class="btn btn-second" id="signupButton">Inscrever-se</div>
+                </form>
+            </div>
+        </div> <!-- O primeiro conteúdo -->
+
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title title-primary">É sua primeira vez aqui?</h2>
+                <p class="description description-primario">Se sim, integre-se ao SocialEvent <br> e comece a jornada conosco </p>
+                <button id="signup" class="btn btn-primary">Cadastre-se</button>   
+            </div>
+            <div class="second-column"> <!-- 2° coluna onde ficará a a parte de cadastro-->
+                <h2 class="title title-second">Acesse sua conta</h2>
+                <div class="sobre-nos">
+                    <ul class="lista-redirecionamento">
+                        <a class="link-redirecionamento-media" href="/codigo-fonte/templates/pagina-inicial/pagina-inical.html">
+                            <li class="item-redirecionamento-media">
+                                <i class="fa-regular fa-house-user"></i>
+                            </li>
+                        </a>         
+                        <a class="link-redirecionamento-media" href="#">
+                            <li class="item-redirecionamento-media">
+                                <i class="fa-solid fa-question"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div> <!-- Redirecionamentos dentro do próprio site -->
+                <p class="description">Use seu e-mail de cadastro</p>
+
+                <form class="form">
+                    <label class="label-input">
+                        <i class="fa-regular fa-envelope icon-modify" style="color: #007acc;"></i>
+                        <input type="email" name="e-mail" id="emailLogin" class="form_input" placeholder="E-mail">
+                    </label>
+
+                    <label class="label-input">
+                        <i class="fa-regular fa-lock icon-modify" style="color: #007acc;"></i>
+                        <input type="password" name="senha" class="form_input" id="senhaLogin" placeholder="Senha">
+                    </label>
+                    
+                    <a class="password" href="#">Esqueceu sua senha?</a>
+                
+                    <div class="btn btn-second" id="button">Entrar</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
